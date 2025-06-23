@@ -1,12 +1,11 @@
+import Navbar from "./components/Navbar"
 
 
 const App = () => {
   return (
-    <div className="flex justify-center items-center h-screen">
-      <h1 className="text-4xl font-bold">
-        Welcome To Sujal Patel Portfolio
-      </h1>
-    </div>
+    <main className="w-[60%] h-screen bg-black m-auto flex justify-center ">
+      <Navbar />
+    </main>
   )
 }
 
