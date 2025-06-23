@@ -1,22 +1,19 @@
-export const navlist = [
+export const navItems = [
     {
-        id: 1,
-        title: "Home",
-        url: "/",
+      name: "Home",
+      link: "/",
     },
     {
-        id: 2,
-        title: "Blog",
-        url: "/blog",
+      name: "Project",
+      link: "/project",
     },
     {
-        id: 3,
-        title: "Projects",
-        url: "/projects",
+      name: "Blog",
+      link: "/blog",
     },
     {
-        id: 4,
-        title: "Contact",
-        url: "/contact",
+      name: "Contact",
+      link: "/contact",
+      
     },
-]
+  ];

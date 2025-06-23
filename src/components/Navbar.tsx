@@ -1,20 +1,18 @@
-// import { Link } from "react-router-dom";
-import { navlist } from "../constants";
+import { Link } from "react-router-dom";
+import { ModeToggle } from "./mode-toggle";
+import { navItems } from "@/constants";
 
-const Navbar = () => {
+export function Navbar() {
   return (
-    <nav className="w-[80%] h-18 flex justify-between items-center mt-4 bg-zinc-900 rounded-lg">
-      <img src="/logo.svg" alt="logo" className="h-10 ml-5" />
-      <ul className="flex items-center gap-10 mr-5">
-        {navlist.map(({ id, title, url }) => (
-          <li className="text-gray-200" key={id}>
-            <a className="text-xl" href={url}>{title}</a>
-            {/* <Link to={url}>{title}</Link> */}
+    <div className="w-full m-auto flex justify-between items-center mt-8">
+      <ModeToggle />
+      <ul className="px-4 py-3 border-1 rounded-full dark:bg-zinc-900 bg-zinc-100">
+        {navItems.map(({ name, link }) => (
+          <li key={name} className="inline-block mx-4 text-lg">
+            <Link to={link}>{name}</Link>
           </li>
         ))}
       </ul>
-    </nav>
+    </div>
   );
-};
-
-export default Navbar;
+}
