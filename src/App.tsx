@@ -6,6 +6,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import { ThemeProvider } from "./components/theme-provider";
 
+
 const App = () => {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
