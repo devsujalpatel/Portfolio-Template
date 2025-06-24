@@ -1,11 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import {Navbar} from "./components/Navbar";
+import { Navbar } from "./components/Navbar";
 import Home from "./components/Home";
 import Blog from "./components/Blog";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import { ThemeProvider } from "./components/theme-provider";
-
 
 const App = () => {
   return (
