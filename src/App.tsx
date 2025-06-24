@@ -5,11 +5,14 @@ import Blog from "./components/Blog";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import { ThemeProvider } from "./components/theme-provider";
+import CanvasCursor from "./components/Cursor";
+
 
 const App = () => {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <main className="w-[50%] m-auto">
+        <CanvasCursor />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
