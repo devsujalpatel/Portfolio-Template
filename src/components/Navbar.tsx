@@ -13,7 +13,7 @@ export function Navbar() {
   return (
     <div className="w-full m-auto flex justify-between items-center mt-8">
       <ModeToggle />
-      <ul className="px-4 py-3 border-1 rounded-full dark:bg-zinc-900">
+      <ul className="px-4 py-3 border-1 dark:border-zinc-800 border-zinc-200 rounded-full dark:bg-zinc-900 bg-gray-100">
         {navItems.map(({ name, link }) => (
           <li key={name} className="inline-block mx-4 text-lg">
             <Link
