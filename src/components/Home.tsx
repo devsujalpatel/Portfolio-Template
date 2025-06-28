@@ -1,5 +1,10 @@
 import { Meteors } from "@/components/magicui/meteors";
 import GitHubSection from "./GithubSection";
+import MagicalShareMenu from "./MagicShareMenu";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { SiPeerlist, SiLeetcode } from "react-icons/si";
+
 
 const techStack = [
   { name: "Go", icon: "go", color: "#00ADD8" },
@@ -20,7 +25,7 @@ const techStack = [
 
 const Home = () => {
   return (
-    <section className="w-full h-[80vh] mt-4 flex z-999 flex-col">
+    <section className="w-full h-[80vh] flex z-999 flex-col">
       <div className="w-full flex justify-between">
         <div className="mt-15">
           <h1 className="text-5xl font-extrabold  mt-15 ml-10 ">Sujal Patel</h1>
@@ -48,12 +53,24 @@ const Home = () => {
         </div>
         <div className="mt-15">
           <Meteors number={10} />
-          <div>
+          <div className="relative">
             <img
               src="./myProfile.jpg"
               className="w-32 rounded-md mt-10 mr-15"
               alt="profile image"
             />
+                <div className="absolute top-10 -right-5">
+           <MagicalShareMenu
+
+              socialLinks={[
+                { icon: <FaGithub />, color: "#000000", url: "https://sujalpatel.tech/github" },
+                { icon: <FaXTwitter />, color: "#000000", url: "https://sujalpatel.tech/x" },
+                { icon: <FaLinkedin />, color: "#1877f2", url: "https://sujalpatel.tech/linkedin" },
+                { icon: <SiPeerlist />, color: "#77dd32", url: "https://peerlist.io/sujalpatel" },
+                { icon: <SiLeetcode />, color: "#ff4500", url: "https://leetcode.com/u/sujalpatelcoder/" },
+              ]}
+            />
+        </div>
           </div>
         </div>
       </div>
@@ -95,8 +112,9 @@ const Home = () => {
         </div>
       </div>
       <div className="mt-4 flex items-center flex-col">
-          <GitHubSection />
+        <GitHubSection />
       </div>
+    
     </section>
   );
 };
