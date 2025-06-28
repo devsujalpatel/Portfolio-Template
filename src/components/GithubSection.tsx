@@ -28,7 +28,7 @@ const GitHubSection = () => {
       <h2 className="text-2xl font-extrabold dark:text-gray-300 text-gray-700">
         GitHub Calendar
       </h2>
-      <a href="https://sujalpatel.tech/github" target="_blank">
+      <a href="https://sujalpatel.tech/github" target="_blank" className="w-full">
         <div className="w-[93%] dark:bg-zinc-900 bg-gray-100 mt-6 flex justify-center items-center p-4 rounded-lg ">
         <GitHubCalendar
           username="devsujalpatel"
