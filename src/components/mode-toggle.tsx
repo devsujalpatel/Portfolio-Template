@@ -12,11 +12,11 @@ export function ModeToggle() {
 
   return (
     <button
-      className="p-2 rounded-md transition-colors hover:bg-gray-200 dark:hover:bg-gray-800"
+      className="p-2 rounded-md transition-colors  hover:bg-gray-200 dark:hover:bg-gray-800 z-40"
       onClick={() => setTheme((theme) => (theme === "dark" ? "light" : "dark"))}
     >
-      <Sun className="hidden h-5 w-5 text-gray-500 dark:block" />
-      <Moon className="block h-5 w-5 text-gray-800 dark:hidden" />
+      <Sun className="hidden h-4 w-4 text-gray-100 dark:block" />
+      <Moon className="block h-4 w-4 text-gray-800 dark:hidden" />
     </button>
   )
 }
