@@ -1,13 +1,14 @@
-import { NavbarDemo } from "@/components/Navbar";
+import { NavbarComp } from "@/components/Navbar";
+
 
 export default function Home() {
   return (
-   <div className="w-1/2 mx-auto dark:bg-zinc-700">
+   <main className="w-[56rem] mx-auto dark:bg-neutral-900">
     <div>
-      <div />
-      <NavbarDemo />
-      <div />
+     <div className="" />
+      <NavbarComp />
+      <div className="absolute" />
     </div>
-   </div>
+   </main>
   );
 }
