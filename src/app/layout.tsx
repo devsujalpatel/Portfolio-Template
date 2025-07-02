@@ -29,7 +29,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/icon.svg" />
       </head>
-      <body className="antialiased">
+      <body className="antialiased dark:bg-neutral-950 bg-neutral-100">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
