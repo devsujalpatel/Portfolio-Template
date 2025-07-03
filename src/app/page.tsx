@@ -1,15 +1,28 @@
-import { NavbarComp } from "@/components/Navbar";
+import Card from "@/components/Card";
+import { TextFlip } from "@/components/TextFlip";
 
 export default function Home() {
   return (
-    <main className=" mx-auto w-[56rem] dark:bg-neutral-900 bg-white h-screen relative">
-      <div className="w-10 absolute h-full bg-neutral-100 dark:bg-neutral-900 -left-10 top-0 border-x border-gray-200 dark:border-neutral-800 bg-[repeating-linear-gradient(315deg,#e5e7eb_0,#e5e7eb_1px,transparent_0,transparent_50%)] bg-[length:10px_10px] bg-fixed dark:bg-[repeating-linear-gradient(315deg,#27272a_0,#27272a_1px,transparent_0,transparent_50%)]" />
-      <div className="">
+    <div>
+      <div className="w-full  ml-5 mt-5">
+        <div className="flex">
+          <h1 className="text-4xl text-neutral-900 dark:text-neutral-100  font-bold tracking-wide">
+            Sujal Patel
+          </h1>
+          <TextFlip />
+        </div>
+        <p className="w-[65%] text-zinc-500 mt-5 text-md font-medium">
+          They call me Bugsy. Not because I write bugs... but because I live
+          with them. I’m a software engineer with a soft spot for pixels.
+        </p>
+      </div>
+      
+      <div className="w-full h-full border-t mt-5 border-b shadow-neutral-900 shadow-inner">
+        <div className="m-5 border inline-block px-1 text-lg dark:bg-neutral-800 bg-neutral-300 dark:text-white">I love building things</div>
         <div>
-          <NavbarComp />
+          <Card  />
         </div>
       </div>
-      <div className="w-10 absolute h-full bg-neutral-100 dark:bg-neutral-900 -right-10 top-0 border-x border-gray-200 dark:border-neutral-800 bg-[repeating-linear-gradient(315deg,#e5e7eb_0,#e5e7eb_1px,transparent_0,transparent_50%)] bg-[length:10px_10px] bg-fixed dark:bg-[repeating-linear-gradient(315deg,#27272a_0,#27272a_1px,transparent_0,transparent_50%)]" />
-    </main>
+    </div>
   );
 }
