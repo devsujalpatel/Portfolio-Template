@@ -7,6 +7,7 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "motion/react";
+import Link from "next/link";
 
 import React, { useRef, useState } from "react";
 
@@ -25,7 +26,7 @@ interface NavBodyProps {
 interface NavItemsProps {
   items: {
     name: string | React.ReactNode;
-    link?: string;
+    link: string;
   }[];
   className?: string;
   onItemClick?: () => void;
@@ -125,12 +126,12 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
       )}
     >
       {items.map((item, idx) => (
-        <a
+        <Link
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
           className="relative py-2 px-2 text-neutral-600 dark:text-neutral-300"
           key={`link-${idx}`}
-          href={item?.link}
+          href={item.link}
         >
           {hovered === idx && (
             <motion.div
@@ -139,7 +140,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
             />
           )}
           <span className="relative z-20">{item.name}</span>
-        </a>
+        </Link>
       ))}
     </motion.div>
   );
@@ -232,8 +233,8 @@ export const MobileNavToggle = ({
 
 export const NavbarLogo = () => {
   return (
-    <a
-      href="#"
+    <Link
+      href="/"
       className="relative z-20 mr-4 -ml-2 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
       <img
@@ -243,7 +244,7 @@ export const NavbarLogo = () => {
         height={40}
       />
      
-    </a>
+    </Link>
   );
 };
 
