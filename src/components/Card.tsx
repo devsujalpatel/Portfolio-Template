@@ -1,27 +1,46 @@
-import { ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { HoverArea, HoverCard } from "./ui/hover-card";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
+import { ArrowUpRight } from "lucide-react";
 
-interface CardProps {
+export interface CardProps {
   title: string;
   description: string;
   link: string;
   image: string;
 }
+
 const Card = ({ title, description, link, image }: CardProps) => {
   return (
-    <a
-      href={link}
-      target="_blank"
-      className="w-[30%] h-full flex flex-col justify-center items-center p-2"
-    >
-      <Image src={image} width={300} height={300} alt={title} className="rounded-lg" />
-      <div className="mt-4 hover:ml-2 transition-all duration-200">
-        <h2 className="text-left text-xl font-bold">{title}</h2>
-      <p className="text-left text-sm mt-4 font-semibold text-zinc-500">{description}</p>
-      </div>
-      <button className="bg-gray-200 mt-4 mb-5 hover:bg-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 cursor-pointer rounded-md px-2 py-1 flex">Check it out <ArrowUpRight size={20} /></button>
-    </a>
+    <HoverArea className="w-full sm:w-1/2 md:w-1/3 p-2">
+      <HoverCard
+        className="rounded-lg flex flex-col items-center h-full"
+        color="teal"
+      >
+        <div className="w-[280px]">
+          <Image
+            src={image}
+            alt={title}
+            width={300}
+            height={300}
+            className="rounded-xl p-4"
+          />
+        </div>
+        <div className="py-4 px-4 text-left ">
+          <h2 className="text-2xl font-bold">{title}</h2>
+          <p className="text-md text-zinc-500 font-semibold mt-2">
+            {description}
+          </p>
+          <Link href={link} target="_blank" rel="noopener noreferrer">
+            <Button className="mt-4 dark:bg-zinc-300  dark:hover:bg-zinc-400 dark:text-neutral-950">
+              Check it out <ArrowUpRight />
+            </Button>
+          </Link>
+        </div>
+      </HoverCard>
+    </HoverArea>
   );
 };
 
