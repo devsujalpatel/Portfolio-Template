@@ -13,7 +13,12 @@ type HoverCardProps = {
   className?: string;
 } & React.ComponentPropsWithoutRef<"div">;
 
-function HoverArea({ children, className, size = 300, ...props }: HoverAreaProps) {
+function HoverArea({
+  children,
+  className,
+  size = 300,
+  ...props
+}: HoverAreaProps) {
   const elem = useRef<HTMLDivElement>(null);
   const currFrameId = useRef<number | null>(null);
   const currCoordinates = useRef<{ x: number; y: number } | null>(null);
@@ -71,7 +76,12 @@ function HoverArea({ children, className, size = 300, ...props }: HoverAreaProps
   );
 }
 
-function HoverCard({ color = "blue", className, children, ...props }: HoverCardProps) {
+function HoverCard({
+  color = "blue",
+  className,
+  children,
+  ...props
+}: HoverCardProps) {
   const element = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
