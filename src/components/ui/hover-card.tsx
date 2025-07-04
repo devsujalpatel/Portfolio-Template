@@ -23,9 +23,6 @@ function HoverArea({
   const currFrameId = useRef<number | null>(null);
   const currCoordinates = useRef<{ x: number; y: number } | null>(null);
 
-  /**
-   * Update the position before the next browser paint in sync with render cycle.
-   */
   function updateFramePosition() {
     if (currCoordinates.current && elem.current) {
       const { x, y } = currCoordinates.current;

@@ -1,8 +1,9 @@
 "use client";
 import Card from "@/components/Card";
 import { TextFlip } from "@/components/TextFlip";
-import { Button } from "@/components/ui/button";
 import { CardProps } from "@/components/Card";
+
+
 
 const cardProps: CardProps[] = [
   {
@@ -33,7 +34,7 @@ export default function Home() {
     <div>
       <div className="w-full  ml-5 mt-5">
         <div className="flex">
-          <h1 className="text-4xl text-neutral-900 dark:text-neutral-100  font-bold tracking-wide">
+          <h1 className={`text-4xl text-neutral-900  dark:text-neutral-100  font-bold tracking-wide`}>
             Sujal Patel
           </h1>
           <TextFlip />

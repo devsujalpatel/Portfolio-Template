@@ -1,23 +1,21 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import { NavbarComp } from "@/components/Navbar";
+import { Inter, Bricolage_Grotesque } from "next/font/google";
+import { Metadata } from "next";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  weight: ["400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+export const bricolage = Bricolage_Grotesque({
+  weight: ["400", "500", "600", "700", "800"],
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   title: "Sujal Patel | Portfolio",
-  description:
-    "Portfolio of Sujal Patel, a web developer specializing in React and Next.js.",
+  description: "My Portfolio Website To Showcase Work and Projects",
 };
 
 export default function RootLayout({
@@ -26,15 +24,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable}`}
-      suppressHydrationWarning
-    >
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/icon.svg" />
       </head>
-      <body className="antialiased dark:bg-neutral-950 bg-neutral-100">
+      <body
+        className={`antialiased dark:bg-neutral-950 bg-neutral-100 ${inter.className} ${bricolage.className}`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
